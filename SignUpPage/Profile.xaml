@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SignUpPage.Profile"
+             Title="Profile">
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+        <Label 
+            Text="Profile Information"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Signup Successful!"
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="20"
+            HorizontalOptions="Center"
+            TextColor="Green"/>
+        
+        <VerticalStackLayout Spacing="15" Margin="0,15,0,15">
+            <HorizontalStackLayout Spacing="10">
+                <Label 
+                    Text="Username: " 
+                    FontAttributes="Bold"
+                    WidthRequest="100" />
+                <Label 
+                    x:Name="UsernameLabel"
+                    Text="" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label 
+                    Text="Email: " 
+                    FontAttributes="Bold"
+                    WidthRequest="100" />
+                <Label 
+                    x:Name="EmailLabel"
+                    Text="" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Button 
+            x:Name="SignOutButton"
+            Text="Sign Out"
+            SemanticProperties.Hint="Sign out and return to signup page"
+            Clicked="OnSignOutClicked"
+            HorizontalOptions="Center"
+            Margin="0,10,0,0" />
+
+    </VerticalStackLayout>
+</ContentPage>
